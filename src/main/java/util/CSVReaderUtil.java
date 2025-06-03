@@ -14,11 +14,18 @@ public class CSVReaderUtil {
         List<Question> questions = new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             String[] line;
-            reader.readNext(); // Skip header
-            while ((line = reader.readNext()) != null) {
-                int id = Integer.parseInt(line[0]);
-                String name = line[1];
-                questions.add(new Question(id, name));
+            String[] column = reader.readNext(); // Skip header
+           
+            while ((line = reader.readNext()) != null) {          
+            	
+                String module = line[0];
+                String subModule = line[1];
+            	String id = line[2];
+                String name = line[3];
+                String quesEnglish = line[4];
+                String quesSpanish = line[5];
+                //System.out.println("line number is :" + column[0]);
+                questions.add(new Question(module,subModule,id, name,quesEnglish, quesSpanish, column));
             }
         } catch (Exception e) {
             e.printStackTrace();

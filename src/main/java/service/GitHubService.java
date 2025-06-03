@@ -16,11 +16,17 @@ public class GitHubService {
 
         String jsonBody = String.format(
         	    "{\n" +
-        	    "  \"title\": \"Q%d| %s\",\n" +
-        	    "  \"body\": \"Auto-created from CSV\",\n" +
+        	    "  \"title\": \"%s | %s | %s | %s\",\n" +
+        	    "  \"body\": \"%s\",\n" +
         	    "  \"labels\": [\"feature\"]\n" +
-        	    "}", question.getQuestionID(), question.getQuestionName().replace("\"", "\\\""));
-
+        	    "}",
+        	    question.getModule(),
+        	    question.getSubModule(),
+        	    question.getQuestionID(),
+        	    question.getQuestionName().replace("\"", "\\\""),
+        	    question.getDescription().replace("\"", "\\\"")
+        	);
+        System.out.println(jsonBody);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
