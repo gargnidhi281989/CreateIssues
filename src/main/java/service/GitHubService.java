@@ -20,11 +20,9 @@ public class GitHubService {
         	    "  \"body\": \"%s\",\n" +
         	    "  \"labels\": [\"feature\"]\n" +
         	    "}",
-        	    question.getModule(),
-        	    question.getSubModule(),
-        	    question.getQuestionID(),
-        	    question.getQuestionName().replace("\"", "\\\""),
-        	    question.getDescription().replace("\"", "\\\"")
+        	    question.getModule(), question.getSubModule(),
+        	    question.getQuestionID(), question.getQuestionName().replace("\"", "\\\""),
+        	    question.getDescription()
         	);
         System.out.println(jsonBody);
 

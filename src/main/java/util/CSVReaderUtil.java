@@ -24,8 +24,13 @@ public class CSVReaderUtil {
                 String name = line[3];
                 String quesEnglish = line[4];
                 String quesSpanish = line[5];
+                String hintEnglish = line[6];
+                String hintSpanish = line[7];
+                String choiceId = line[8];
+                String hintAnswerLang1 = line[9];
+                String answerChoiceSpanish = line[10];
                 //System.out.println("line number is :" + column[0]);
-                questions.add(new Question(module,subModule,id, name,quesEnglish, quesSpanish, column));
+                questions.add(new Question(module,subModule,id, name,quesEnglish, quesSpanish, hintEnglish, hintSpanish,choiceId, hintAnswerLang1,answerChoiceSpanish, column));
             }
         } catch (Exception e) {
             e.printStackTrace();
