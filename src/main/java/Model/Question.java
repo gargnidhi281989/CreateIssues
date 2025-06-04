@@ -12,9 +12,10 @@ package Model;
     private String choiceId;
     private String answerChoiceLang1;
     private String answerChoiceSpanish;
+    private String workFlow;
     private String[] column;
 
-    public Question(String module, String subModule, String questionID, String questionName,String quesEnglish, String quesSpanish, String hintEnglish, String hintSpanish,String choiceId, String answerChoiceLang1, String answerChoiceSpanish, String[] column) {
+    public Question(String module, String subModule, String questionID, String questionName,String quesEnglish, String quesSpanish, String hintEnglish, String hintSpanish,String choiceId, String answerChoiceLang1, String answerChoiceSpanish, String workFlow ,String[] column) {
         this.questionID = questionID;
         this.questionName = questionName;
         this.module = module;
@@ -26,6 +27,7 @@ package Model;
         this.choiceId = choiceId;
         this.answerChoiceLang1 = answerChoiceLang1;
         this.answerChoiceSpanish = answerChoiceSpanish;
+        this.workFlow = workFlow;
         this.column = column;
     }
 
@@ -38,7 +40,9 @@ package Model;
         	    	    "### | %s | %s |\\n" +
         	    	    "| %s | %s | \\n" +
         	    	    "### | %s | %s |\\n" +
-        	    	    "| %s | %s |",
+        	    	    "| %s | %s | \\n" +
+        	    	    "### | %s |\\n" +
+        	    	    "| %s | \\n",
         	    	    column[4], column[5],
         	    	    quesEnglish, quesSpanish,
         	    	    column[6], column[7],
@@ -46,7 +50,9 @@ package Model;
         	    	    column[8], column[9],
         	    	    choiceId, answerChoiceLang1.replace("\n", "<br>"),
         	    	    column[8], column[10],
-        	    	    choiceId, answerChoiceSpanish.replace("\n", "<br>")
+        	    	    choiceId, answerChoiceSpanish.replace("\n", "<br>"),
+        	    	    column[11],
+        	    	    workFlow
         	    	);
         desc = desc.replace("\"", "\\\"");
        

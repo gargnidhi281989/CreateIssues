@@ -1,4 +1,4 @@
-module,subModule,questionID,questionName,questEnglish,questSpanish,hintEnglish,hintSpanish,choiceId,answerChoiceEnglish,answerChoiceSpanish
+module,subModule,questionID,questionName,questEnglish,questSpanish,hintEnglish,hintSpanish,choiceId,answerChoiceEnglish,answerChoiceSpanish,workFlow
 Activity,Location,select multiple,Activity_question_12,Household Location Details ,etalles de ubicación del hogar,"Other crops cultivated other than coffee, including natural or cultivated pastures for animal feed.","Otros cultivos además del café, incluyendo pastos naturales o cultivados para la alimentación animal",ans_id_activity_who,"Chemical fertilizer
 Organic fertilizer
 Organic pesticides
@@ -17,5 +17,5 @@ Herbicides
 Paillis
 Aliments / suppléments pour bétail
 Médicaments pour bétail
-Autre"
-Farm,Member Details,,Farm_ques_22,Household Member Details ,de ubicación del hogar, animal feed.,Otros cultivos ,,,
+Autre",activities_other_costs= Cocoa related activities
+Farm,Member Details,,Farm_ques_22,Household Member Details ,de ubicación del hogar, animal feed.,Otros cultivos ,,,,
